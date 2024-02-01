@@ -117,6 +117,12 @@ lazy.setup({
         'saadparwaiz1/cmp_luasnip',
       },
     },
+    -- codeium
+    {
+      'Exafunction/codeium.vim',
+      event = 'BufEnter',
+    },
+
   },
 })
 
