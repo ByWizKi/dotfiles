@@ -27,7 +27,7 @@ alias ll="ls -lah"
 alias la="ls -A"
 alias l="ls -CF"
 #Keymap for autosuggestion
-bindkey '  ' autosuggest-accept
-bindkey '\t\t' autosuggest-execute 
+bindkey '  ' autosuggest-execute
+bindkey '\t\t' autosuggest-accept 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
