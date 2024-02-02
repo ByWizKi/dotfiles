@@ -33,16 +33,12 @@ end
 lazy.setup({
   spec = {
     -- Thème de couleur :
-    -- Le thème de couleur doit être disponible au démarrage de Neovim.
     {
-      'navarasu/onedark.nvim',
-      lazy = false, -- assurez-vous de charger ceci au démarrage s'il s'agit de votre thème principal
-      priority = 1000, -- assurez-vous de charger ceci avant tous les autres plugins de démarrage
+      "bluz71/vim-moonfly-colors",
+      name = "moonfly",
+      lazy = true,
+      priority = 1000,
     },
-
-    -- autres thèmes de couleur :
-    { 'tanvirtin/monokai.nvim', lazy = true },
-    { 'https://github.com/rose-pine/neovim', name = 'rose-pine', lazy = true },
 
     -- Icônes
     { 'kyazdani42/nvim-web-devicons', lazy = true },
@@ -69,20 +65,35 @@ lazy.setup({
     -- Explorateur de fichiers
     {
       'kyazdani42/nvim-tree.lua',
+      lazy = true,
       dependencies = { 'kyazdani42/nvim-web-devicons' },
     },
 
+    -- BarBar
+      {'romgrk/barbar.nvim',
+        dependencies = {
+          'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
+          'kyazdani42/nvim-web-devicons', -- OPTIONAL: for file icons
+        },
+        init = function() vim.g.barbar_auto_setup = false end,
+        opts = {
+
+        },
+        version = '^1.0.0', -- optional: only update when a new 1.x version is released
+      },
+
+
+
     -- Barre de statut
     {
-      'freddiehaddad/feline.nvim',
-      dependencies = {
-        'kyazdani42/nvim-web-devicons',
-        'lewis6991/gitsigns.nvim',
-      },
+      'nvim-lualine/lualine.nvim',
+      lazy = true,
+      dependencies = { 'kyazdani42/nvim-web-devicons' },
     },
 
     -- Treesitter
-    { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
+
+    { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate', lazy = true },
 
     -- Ligne d'indentation
     { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {} },
@@ -100,15 +111,12 @@ lazy.setup({
     },
 
     -- LSP
-    { 'neovim/nvim-lspconfig' },
+    { 'neovim/nvim-lspconfig', lazy = true },
 
     -- Autocomplétion
     {
       'hrsh7th/nvim-cmp',
-      -- charger cmp à l'entrée en mode insertion
       event = 'InsertEnter',
-      -- ces dépendances ne seront chargées que lorsque cmp sera chargé
-      -- les dépendances sont toujours chargées de manière paresseuse sauf indication contraire
       dependencies = {
         'L3MON4D3/LuaSnip',
         'hrsh7th/cmp-nvim-lsp',
@@ -117,7 +125,7 @@ lazy.setup({
         'saadparwaiz1/cmp_luasnip',
       },
     },
-    -- codeium
+    -- Codeium
     {
       'Exafunction/codeium.vim',
       event = 'BufEnter',
