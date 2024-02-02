@@ -45,11 +45,11 @@ map("n", "<leader>tp", ":tabclose<CR>")
 -- Commentaire : Ferme l'onglet actuellement sélectionné.
 
 -- Naviguer vers l'onglet suivant
-map("n", "<leader>]>", ":tabnext<CR>")
+map("n", "<leader>]", ":tabnext<CR>")
 -- Commentaire : Passe à l'onglet suivant.
 
 -- Naviguer vers l'onglet précédent
-map("n", "<leader>t[", ":tabprevious<CR>")
+map("n", "<leader>[", ":tabprevious<CR>")
 -- Commentaire : Passe à l'onglet précédent.
 
 -- La division des fenetres
