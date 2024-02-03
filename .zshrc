@@ -12,16 +12,20 @@ export NVIM=~/.dotfiles
 # Configuration de Oh My Zsh
 export ZSH="$HOME/.oh-my-zsh"
 
+# Configuration de flutter
+export PATH=$HOME/development/flutter/bin:$PATH
+
+
 # Thème
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Plugins
-plugins=(git 
+plugins=(git
 zsh-autosuggestions
-zsh-syntax-highlighting 
-sudo 
-aliases 
-ant 
+zsh-syntax-highlighting
+sudo
+aliases
+ant
 tmux)
 
 source $ZSH/oh-my-zsh.sh
@@ -32,6 +36,6 @@ alias la="ls -A"
 alias l="ls -CF"
 #Keymap for autosuggestion
 bindkey '  ' autosuggest-execute
-bindkey '\t\t' autosuggest-accept 
+bindkey '\t\t' autosuggest-accept
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
