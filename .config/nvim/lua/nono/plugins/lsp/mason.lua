@@ -33,7 +33,8 @@ return {
         "html",
         "tsserver",
         "cssls",
-        "sumneko_lua",
+        "lua_ls",
+        "astro",
         -- Ajoute d'autres serveurs LSP selon les besoins
       },
       automatic_installation = true,

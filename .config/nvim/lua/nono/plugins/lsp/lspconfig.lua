@@ -9,6 +9,8 @@ return {
     -- import lspconfig plugin
     local lspconfig = require("lspconfig")
 
+    -- Auto reload flutter
+
     -- import cmp-nvim-lsp plugin
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
@@ -41,7 +43,12 @@ return {
       keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
 
       opts.desc = "Show buffer diagnostics"
-      keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
+      keymap.set(
+        "n",
+        "<leader>D",
+        "<cmd>Telescope diagnostics bufnr=0<CR>",
+        opts
+      ) -- show  diagnostics for file
 
       opts.desc = "Show line diagnostics"
       keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts) -- show diagnostics for line
@@ -64,7 +71,8 @@ return {
 
     -- Change the Diagnostic symbols in the sign column (gutter)
     -- (not in youtube nvim video)
-    local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
+    local signs =
+      { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
     for type, icon in pairs(signs) do
       local hl = "DiagnosticSign" .. type
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
@@ -110,6 +118,10 @@ return {
         })
       end,
     })
+    --astro
+    lspconfig["astro"].setup({
+      capabilities = capabilities,
+    })
 
     -- configure prisma orm server
     lspconfig["prismals"].setup({
@@ -121,25 +133,36 @@ return {
     lspconfig["graphql"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
-      filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
+      filetypes = {
+        "graphql",
+        "gql",
+        "svelte",
+        "typescriptreact",
+        "javascriptreact",
+      },
     })
 
     -- configure emmet language server
     lspconfig["emmet_ls"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
-      filetypes = { "html",
-                    "typescript",
-                    "typescriptreact",
-                    "javascriptreact",
-                    "css",
-                    "sass",
-                    "scss",
-                    "less",
-                    "svelte",
-                    "cpp",
-                    "java",
+      filetypes = {
+        "html",
+        "typescript",
+        "typescriptreact",
+        "javascriptreact",
+        "css",
+        "sass",
+        "scss",
+        "less",
+        "svelte",
+        "cpp",
       },
+    })
+    -- diagnostic
+    vim.diagnostic.config({
+      virtual_text = true,
+      signs = true,
     })
 
     -- configure python server

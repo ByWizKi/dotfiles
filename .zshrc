@@ -14,6 +14,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # Configuration de flutter
 export PATH=$HOME/development/flutter/bin:$PATH
+export PATH=$HOME/.gem/bin:$PATH
 
 
 # Thème
