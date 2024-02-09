@@ -8,31 +8,31 @@ return {
 
     -- Set header
     dashboard.section.header.val = {
-      "                                                     ",
-      "  ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ",
-      "  ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ ",
-      "  ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║ ",
-      "  ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║ ",
-      "  ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ ",
-      "  ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ",
-      "                                                     ",
+      "███╗   ██╗ ██████╗ ███╗   ██╗ ██████╗ ",
+      "████╗  ██║██╔═══██╗████╗  ██║██╔═══██╗",
+      "██╔██╗ ██║██║   ██║██╔██╗ ██║██║   ██║",
+      "██║╚██╗██║██║   ██║██║╚██╗██║██║   ██║",
+      "██║ ╚████║╚██████╔╝██║ ╚████║╚██████╔╝",
+      "╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝ ",
+      "                                      ",
     }
 
     -- Set menu
     dashboard.section.buttons.val = {
+
       dashboard.button("qa", "  > New File", "<cmd>ene<CR>"),
       dashboard.button(
-        "qf",
+        "qfd",
         "  > Toggle file explorer",
         "<cmd>NvimTreeToggle<CR>"
       ),
       dashboard.button(
-        "qff",
+        "qfi",
         "󰱼 > Find File",
         "<cmd>Telescope find_files<CR>"
       ),
       dashboard.button(
-        "qwf",
+        "qfw",
         "  > Find Word",
         "<cmd>Telescope live_grep<CR>"
       ),
@@ -41,7 +41,7 @@ return {
         "󰁯  > Restore Session For Current Directory",
         "<cmd>SessionRestore<CR>"
       ),
-      dashboard.button("qqq", " > Quit NVIM", "<cmd>qa<CR>"),
+      dashboard.button("q,", " > Quit NVIM", "<cmd>qa<CR>"),
     }
 
     -- Send config to alpha

@@ -37,18 +37,17 @@ return {
       format_on_save = { -- Configuration du formatage à la sauvegarde
         lsp_fallback = true, -- Utilise le formateur LSP en cas de besoin
         async = false, -- Désactive le formatage asynchrone
-        timeout_ms = 1000, -- Timeout après 1000 ms
+        timeout_ms = 500, -- Timeout après 100 ms
       },
     })
 
     -- Raccourci pour formater manuellement le fichier ou une sélection
-    vim.keymap.set({ "n", "v" }, "<leader>mp", function()
+    vim.keymap.set({ "n", "v" }, "<leader>fp", function()
       conform.format({
         lsp_fallback = true, -- Utilise le formateur LSP en cas de besoin
         async = false, -- Désactive le formatage asynchrone
-        timeout_ms = 1000, -- Timeout après 1000 ms
+        timeout_ms = 100, -- Timeout après 1000 ms
       })
     end, { desc = "Formater le fichier ou la sélection (en mode visuel)" })
   end,
 }
-

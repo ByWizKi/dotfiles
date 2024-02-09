@@ -31,10 +31,10 @@ return {
         end,
       },
       mapping = cmp.mapping.preset.insert({
-        ["<C-l>"] = cmp.mapping.select_prev_item(), -- Sélectionne la suggestion précédente
+        ["<C-k>"] = cmp.mapping.select_prev_item(), -- Sélectionne la suggestion précédente
         ["<C-j>"] = cmp.mapping.select_next_item(), -- Sélectionne la suggestion suivante
-        ["<C-b>"] = cmp.mapping.scroll_docs(-4), -- Fait défiler la documentation vers le haut
-        ["<C-f>"] = cmp.mapping.scroll_docs(4), -- Fait défiler la documentation vers le bas
+        ["<C-h>"] = cmp.mapping.scroll_docs(-4), -- Fait défiler la documentation vers le haut
+        ["<C-l>"] = cmp.mapping.scroll_docs(4), -- Fait défiler la documentation vers le bas
         ["<C-Space>"] = cmp.mapping.complete(), -- Affiche les suggestions de complétion
         ["<C-e>"] = cmp.mapping.abort(), -- Ferme le menu de complétion
         ["<CR>"] = cmp.mapping.confirm({ select = false }), -- Confirme la sélection sans choisir automatiquement

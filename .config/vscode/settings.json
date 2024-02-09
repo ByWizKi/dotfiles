@@ -1,0 +1,210 @@
+{
+  // Les styles vs code
+  "editor.fontLigatures": true,
+  "editor.fontSize": 16,
+  "editor.fontFamily": "MesloLGS NF",
+  "workbench.colorTheme": "Ayu Dark",
+  "window.zoomLevel": 0.5,
+  "editor.fontWeight": "500",
+  "terminal.integrated.fontSize": 17,
+  // La status bar
+
+  "workbench.activityBar.location": "hidden",
+
+  // Les conventions de formatage
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "editor.tabSize": 2,
+
+  // Les icones
+  "workbench.iconTheme": "ayu",
+
+  // Les tabs
+  "workbench.editor.limit.value": 6,
+  "workbench.editor.limit.enabled": true,
+  "workbench.startupEditor": "none",
+  "editor.minimap.enabled": false,
+  "editor.linkedEditing": true,
+  "editor.statusBar.visible": false,
+  "editor.activityBar.visible": false,
+
+  // Les fichiers
+  "files.autoSave": "afterDelay",
+
+  "files.exclude": {
+    "**/.DS_Store": true,
+
+    "**/node_modules": true,
+    "**/bower_components": true,
+
+    "**/__pycache__": true,
+    "**/.cache": true,
+    "**/.idea": true,
+    "**/.pytest_cache": true,
+    "**/.mypy_cache": true,
+    "**/.venv": true,
+    "**/.coverage": true,
+    "**/*.py[co]": true,
+    "**/htmlcoverage": true,
+    "**/docs/build": true,
+
+    "**/.git": true,
+    "**/svn": true,
+    "**/hg": true,
+    "**CSV": true,
+    "**/Thumbs.db": true,
+    "pnpm-lock.yaml": true
+  },
+
+  // Les autorisations
+  "git.confirmSync": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+
+  // Javascript
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  // Live serveur
+  "liveServer.settings.donotShowInfoMsg": true,
+  // TypeScript
+
+  // Java
+
+  // Python
+
+  // C#
+
+  // C++
+
+  // VimVscode
+  "vim.leader": "q", // leader
+  "vim.hlsearch": true, // highlight search
+  "vim.useSystemClipboard": true, // use system clipboard
+  "vim.useCtrlKeys": true, // use ctrl keys
+  "vim.autoindent": true, // auto indent
+  "vim.showcmd": true, // show command
+  "vim.smartcase": true, // smart case
+
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // Desactive les fleches
+    {
+      "before": ["<up>"],
+      "after": []
+    },
+    {
+      "before": ["<down>"],
+      "after": []
+    },
+    {
+      "before": ["<left>"],
+      "after": []
+    },
+    {
+      "before": ["<right>"],
+      "after": []
+    },
+
+    // Sauve l'enregistrement
+    {
+      "before": ["<leader>", "."],
+      "commands": ["workbench.action.files.save"]
+    },
+    // Quitter l'editeur
+    {
+      "before": ["<leader>", ","],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    // Ouvrire la side bar
+    {
+      "before": ["<leader>", "f", "f"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    // Ouvrir le files explorer
+    {
+      "before": ["<leader>", "f", "d"],
+      "commands": ["revealInExplorer"]
+    },
+    // Aller au prochain ou precedent editeur
+    {
+      "before": ["<leader>", "]"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["<leader>", "["],
+      "commands": ["workbench.action.previousEditor"]
+    },
+    // Ouvrir le quick open
+    {
+      "before": ["<leader>", "f", "e"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    // Split a la droite
+    {
+      "before": ["<leader>", "v"],
+      "commands": ["workbench.action.splitEditorRight"]
+    },
+    // Fermer les editeurs
+    {
+      "before": ["<leader>", "q", ","],
+      "commands": ["workbench.action.closeAllEditors"]
+    },
+    // Mettre en commentaire
+    {
+      "before": ["<leader>", "m"],
+      "commands": ["editor.action.commentLine"]
+    },
+
+    // Ouvrire FindWord
+    {
+      "before": ["<leader>", "f", "w"],
+      "commands": ["actions.find"]
+    },
+
+    // Creer un nouveau fichier
+    {
+      "before": ["<leader>", "a"],
+      "commands": ["workbench.action.files.newUntitledFile"]
+    },
+
+    // Changer le focus des editeurs
+    {
+      "before": ["<leader>", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+
+    {
+      "before": ["<leader>", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    }
+
+  ],
+
+  "vim.insertModeKeyBindingsNonRecursive": [
+    //Desactive le mode insert
+    {
+      "before": ["leader", "i"],
+      "after": ["<esc>"]
+    },
+    // Desactive les fleches
+    {
+      "before": ["<up>"],
+      "after": []
+    },
+    {
+      "before": ["<down>"],
+      "after": []
+    },
+    {
+      "before": ["<left>"],
+      "after": []
+    },
+    {
+      "before": ["<right>"],
+      "after": []
+    }
+  ]
+}
