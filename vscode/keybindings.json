@@ -1,0 +1,42 @@
+[
+    {
+        "key": "cmd+k", // Pour plier le code
+        "command": "editor.fold",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+j", // Pour déplier le code
+        "command": "editor.unfold",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+shift+a", // Pour fermer le dossier en cours dans l'explorateur
+        "command": "workbench.action.closeFolder"
+    },
+    {
+        "key": "cmd+shift+o", // Pour ouvrir un nouveau dossier
+        "command": "workbench.action.files.openFolder"
+    },
+    {
+        "key": "cmd+t", // Ouvrir le terminal
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "cmd+shift+t", // Ferme le terminal
+        "command": "workbench.action.terminal.kill"
+    },
+    {
+        "key": "cmd+shift+a", // Nouveau fichier
+        "command": "workbench.action.files.newFile"
+    },
+    {
+        "key": "cmd+shift+0", // Passe du terminal au texte editor
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+shift+9", // Passe du editor au terminal
+        "command": "workbench.action.terminal.focus",
+        "when": "editorTextFocus"
+    }
+]

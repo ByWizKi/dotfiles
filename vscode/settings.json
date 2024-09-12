@@ -1,0 +1,84 @@
+{
+    // Apparence et thème
+    "workbench.colorTheme": "Ayu Dark",
+    "editor.fontFamily": "FiraCode Nerd Font Mono",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 16,
+    // Paramètres de curseur et surbrillance
+    "editor.renderLineHighlight": "all",
+    "editor.cursorSmoothCaretAnimation": "on",
+    // Formatage automatique
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+    // Mise en page
+    "editor.wordWrap": "on",
+    "editor.wordWrapColumn": 80,
+    // Sauvegarde
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 500,
+    "files.trimTrailingWhitespace": true,
+    // Suggestions et IntelliSense
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": true
+    },
+    // Terminal
+    "terminal.integrated.defaultProfile": "iTerm2",
+    "terminal.integrated.profiles.osx": {
+        "iTerm2": {
+            "path": "/Applications/iTerm.app/Contents/MacOS/iTerm2",
+            "args": [
+                "--login"
+            ]
+        }
+    },
+    "terminal.external.osxExec": "/Applications/iTerm.app/Contents/MacOS/iTerm2",
+    // Intégration Vim
+    "vim.enableNeovim": true,
+    "vim.useSystemClipboard": true,
+    "vim.leader": "q",
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<leader>",
+                "i"
+            ],
+            "after": [
+                "<ESC>"
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<leader>",
+                "."
+            ],
+            "commands": [
+                "workbench.action.files.save"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                ","
+            ],
+            "commands": [
+                "workbench.action.closeActiveEditor"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "f",
+                "d"
+            ],
+            "commands": [
+                "workbench.explorer.fileView.focus"
+            ]
+        }
+    ],
+    "redhat.telemetry.enabled": true
+}

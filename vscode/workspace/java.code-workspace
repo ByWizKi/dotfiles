@@ -1,0 +1,13 @@
+{
+    "folders": [
+        {
+            "path": "${workspaceFolder}/src"
+        }
+    ],
+    "settings": {
+        "java.configuration.maven.userSettings": "${workspaceFolder}/.maven/settings.xml",
+        "java.checkstyle.configuration": "${workspaceFolder}/checkstyle.xml",
+        "java.errors.incompleteClasspath.severity": "warning",
+        "editor.formatOnSave": true
+    }
+}

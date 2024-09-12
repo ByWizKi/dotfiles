@@ -1,0 +1,23 @@
+[user]
+    name = "THIEBAUD Enzo"
+    email = "enzo.thiebaud@etu.univ-lyon1.fr"
+
+[alias]
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
+    lg = log --oneline --graph --all --decorate
+    amend = commit --amend
+
+[color]
+    ui = true
+
+[core]
+    editor = code --wait
+
+[includeIf "gitdir:~/workspace/java/"]
+    path = ~/dotfiles/gitconfig-java
+
+[includeIf "gitdir:~/workspace/python/"]
+    path = ~/dotfiles/gitconfig-python
