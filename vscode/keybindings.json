@@ -38,5 +38,9 @@
         "key": "cmd+shift+9", // Passe du editor au terminal
         "command": "workbench.action.terminal.focus",
         "when": "editorTextFocus"
+    },
+    {
+        "key" : "ctrl+1",
+        "command": "workbench.action.toggleSidebarVisibility"
     }
 ]

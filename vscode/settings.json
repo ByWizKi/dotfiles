@@ -134,11 +134,19 @@
       "before": ["<leader>", ","],
       "commands": ["workbench.action.closeActiveEditor"]
     },
-    // Ouvrire la side bar
+    // Fermer la sidebar
     {
       "before": ["<leader>", "f", "f"],
-      "commands": ["workbench.action.toggleSidebarVisibility"]
+      "commands": ["workbench.action.toggleSidebarVisibility"],
+      "when": "editorTextFocus"
     },
+
+    {
+      "before": ["<leader>", "f", "f"],
+      "commands": ["workbench.action.toggleSidebarVisibility"],
+      "when": "!editorTextFocus"
+    },
+
     // Ouvrir le files explorer
     {
       "before": ["<leader>", "f", "d"],
