@@ -14,7 +14,7 @@
     ui = true
 
 [core]
-    editor = code --wait
+	editor = vim
 
 [includeIf "gitdir:~/workspace/java/"]
     path = ~/dotfiles/gitconfig-java

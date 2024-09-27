@@ -1,0 +1,79 @@
+-- Obtenir la taille de l'écran via une commande shell
+set screenResolution to do shell script "osascript -e 'tell application \"Finder\" to get bounds of window of desktop' | tr -d ',' | awk '{print $3, $4}'"
+set screenWidth to word 1 of screenResolution as integer
+set screenHeight to word 2 of screenResolution as integer
+
+-- Calculer les positions et tailles des fenêtres en fonction de la taille de l'écran
+set vscodeWidth to screenWidth * 0.5 -- Visual Studio Code prend 2/4 de la largeur
+set vscodeHeight to screenHeight * 0.65 -- 3/4 de la hauteur
+set vscodeX to 0
+set vscodeY to 0
+
+set itermWidth to screenWidth * 0.5 -- iTerm2 prend 3/4 de la largeur
+set itermHeight to screenHeight * 0.32 -- 1/4 de la hauteur
+set itermX to 0
+set itermY to screenHeight * 0.68 -- Placé sous Visual Studio Code
+
+set chromeWidth to screenWidth * 0.5 -- Google Chrome prend 1/4 de la largeur
+set chromeHeight to screenHeight -- Pleine hauteur
+set chromeX to screenWidth * 0.5 -- Placé à droite de Visual Studio Code et iTerm2
+set chromeY to 0
+
+-- Fonction pour vérifier si une application est ouverte
+on appIsRunning(appName)
+	tell application "System Events"
+		set appNameIsRunning to (name of processes) contains appName
+	end tell
+	return appNameIsRunning
+end appIsRunning
+
+-- Ouvrir ou repositionner Visual Studio Code
+if appIsRunning("Code") then
+	tell application "System Events"
+		set position of window 1 of application process "Code" to {vscodeX, vscodeY}
+		set size of window 1 of application process "Code" to {vscodeWidth, vscodeHeight}
+	end tell
+else
+	tell application "Visual Studio Code"
+		activate
+	end tell
+	delay 1
+	tell application "System Events"
+		set position of window 1 of application process "Code" to {vscodeX, vscodeY}
+		set size of window 1 of application process "Code" to {vscodeWidth, vscodeHeight}
+	end tell
+end if
+
+-- Ouvrir ou repositionner iTerm2
+if appIsRunning("iTerm2") then
+	tell application "System Events"
+		set position of window 1 of application process "iTerm2" to {itermX, itermY}
+		set size of window 1 of application process "iTerm2" to {itermWidth, itermHeight}
+	end tell
+else
+	tell application "iTerm"
+		activate
+	end tell
+	delay 1
+	tell application "System Events"
+		set position of window 1 of application process "iTerm2" to {itermX, itermY}
+		set size of window 1 of application process "iTerm2" to {itermWidth, itermHeight}
+	end tell
+end if
+
+-- Ouvrir ou repositionner Google Chrome
+if appIsRunning("Google Chrome") then
+	tell application "System Events"
+		set position of window 1 of application process "Google Chrome" to {chromeX, chromeY}
+		set size of window 1 of application process "Google Chrome" to {chromeWidth, chromeHeight}
+	end tell
+else
+	tell application "Google Chrome"
+		activate
+	end tell
+	delay 1
+	tell application "System Events"
+		set position of window 1 of application process "Google Chrome" to {chromeX, chromeY}
+		set size of window 1 of application process "Google Chrome" to {chromeWidth, chromeHeight}
+	end tell
+end if

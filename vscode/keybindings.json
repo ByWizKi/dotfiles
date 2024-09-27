@@ -10,11 +10,11 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "cmd+shift+a", // Pour fermer le dossier en cours dans l'explorateur
+        "key": "cmd+shift+-", // Pour fermer le dossier en cours dans l'explorateur
         "command": "workbench.action.closeFolder"
     },
     {
-        "key": "cmd+shift+o", // Pour ouvrir un nouveau dossier
+        "key": "cmd+shift+=", // Pour ouvrir un nouveau dossier
         "command": "workbench.action.files.openFolder"
     },
     {
