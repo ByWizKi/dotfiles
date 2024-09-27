@@ -1,84 +1,345 @@
 {
-    // Apparence et thème
-    "workbench.colorTheme": "Ayu Dark",
-    "editor.fontFamily": "FiraCode Nerd Font Mono",
-    "editor.fontLigatures": true,
-    "editor.fontSize": 16,
-    // Paramètres de curseur et surbrillance
-    "editor.renderLineHighlight": "all",
-    "editor.cursorSmoothCaretAnimation": "on",
-    // Formatage automatique
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": true,
-    "editor.formatOnType": true,
-    // Mise en page
-    "editor.wordWrap": "on",
-    "editor.wordWrapColumn": 80,
-    // Sauvegarde
-    "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 500,
-    "files.trimTrailingWhitespace": true,
-    // Suggestions et IntelliSense
-    "editor.quickSuggestions": {
-        "other": true,
-        "comments": false,
-        "strings": true
+  // Apparence et thème
+  "workbench.colorTheme": "Ayu Dark",
+  "editor.fontFamily": "FiraCode Nerd Font Mono",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 16,
+  // Paramètres de curseur et surbrillance
+  "editor.renderLineHighlight": "all",
+  "editor.cursorSmoothCaretAnimation": "on",
+  // Formatage automatique
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  // Mise en page
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 80,
+  // Sauvegarde
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 500,
+  "files.trimTrailingWhitespace": true,
+
+  // Les styles vs code La status bar
+  "workbench.activityBar.location": "hidden",
+
+  // Les conventions de formatage
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "editor.tabSize": 2,
+
+  // Les icones
+  "workbench.iconTheme": "ayu",
+
+  // Les tabs
+  "workbench.editor.limit.value": 6,
+  "workbench.editor.limit.enabled": true,
+  "workbench.startupEditor": "none",
+  "editor.linkedEditing": true,
+  "editor.statusBar.visible": false,
+  "editor.activityBar.visible": false,
+
+  // Le terminal
+  "terminal.external.osxExec": "Iterm.app",
+  // Les fichiers
+
+  "files.exclude": {
+    "**/.DS_Store": true,
+
+    "**/node_modules": true,
+    "**/bower_components": true,
+
+    "**/__pycache__": true,
+    "**/.cache": true,
+    "**/.idea": true,
+    "**/.pytest_cache": true,
+    "**/.mypy_cache": true,
+    "**/.venv": true,
+    "**/.coverage": true,
+    "**/*.py[co]": true,
+    "**/htmlcoverage": true,
+    "**/docs/build": true,
+
+    "**/.git": true,
+    "**/svn": true,
+    "**/hg": true,
+    "**CSV": true,
+    "**/Thumbs.db": true,
+    "pnpm-lock.yaml": true
+  },
+
+  // Les autorisations
+  "git.confirmSync": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+
+  // Javascript
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  // Live serveur
+  "liveServer.settings.donotShowInfoMsg": true,
+  // TypeScript
+
+  // Java
+  "java.jdt.ls.java.home": "/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home",
+
+  // Python
+  "python.pythonPath": "/Users/nono/Antell/antell-supervision-api/env/bin/python",
+
+  // C#
+
+  // C++
+
+  //Dart
+  "dart.debugExternalPackageLibraries": true,
+  "dart.debugSdkLibraries": true,
+
+  // VimVscode
+  "vim.leader": "q", // leader
+  "vim.hlsearch": true, // highlight search
+  "vim.useSystemClipboard": true, // use system clipboard
+  "vim.useCtrlKeys": true, // use ctrl keys
+  "vim.autoindent": true, // auto indent
+  "vim.showcmd": true, // show command
+  "vim.smartcase": true, // smart case
+
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // Desactive les fleches
+    {
+      "before": ["<up>"],
+      "after": []
     },
-    // Terminal
-    "terminal.integrated.defaultProfile": "iTerm2",
-    "terminal.integrated.profiles.osx": {
-        "iTerm2": {
-            "path": "/Applications/iTerm.app/Contents/MacOS/iTerm2",
-            "args": [
-                "--login"
-            ]
-        }
+    {
+      "before": ["<down>"],
+      "after": []
     },
-    "terminal.external.osxExec": "/Applications/iTerm.app/Contents/MacOS/iTerm2",
-    // Intégration Vim
-    "vim.enableNeovim": true,
-    "vim.useSystemClipboard": true,
-    "vim.leader": "q",
-    "vim.insertModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "<leader>",
-                "i"
-            ],
-            "after": [
-                "<ESC>"
-            ]
-        }
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "<leader>",
-                "."
-            ],
-            "commands": [
-                "workbench.action.files.save"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                ","
-            ],
-            "commands": [
-                "workbench.action.closeActiveEditor"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "f",
-                "d"
-            ],
-            "commands": [
-                "workbench.explorer.fileView.focus"
-            ]
-        }
-    ],
-    "redhat.telemetry.enabled": true
+    {
+      "before": ["<left>"],
+      "after": []
+    },
+    {
+      "before": ["<right>"],
+      "after": []
+    },
+
+    // Sauve l'enregistrement
+    {
+      "before": ["<leader>", "."],
+      "commands": ["workbench.action.files.save"]
+    },
+    // Quitter l'editeur
+    {
+      "before": ["<leader>", ","],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    // Ouvrire la side bar
+    {
+      "before": ["<leader>", "f", "f"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    // Ouvrir le files explorer
+    {
+      "before": ["<leader>", "f", "d"],
+      "commands": ["revealInExplorer"]
+    },
+    // Aller au prochain ou precedent editeur
+    {
+      "before": ["<leader>", "]"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["<leader>", "["],
+      "commands": ["workbench.action.previousEditor"]
+    },
+    // Ouvrir le quick open
+    {
+      "before": ["<leader>", "f", "e"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    // Split a la droite
+    {
+      "before": ["<leader>", "v"],
+      "commands": ["workbench.action.splitEditorRight"]
+    },
+    // Fermer les editeurs
+    {
+      "before": ["<leader>", "q", ","],
+      "commands": ["workbench.action.closeAllEditors"]
+    },
+    // Mettre en commentaire
+    {
+      "before": ["<leader>", "m"],
+      "commands": ["editor.action.commentLine"]
+    },
+
+    // Ouvrire FindWord
+    {
+      "before": ["<leader>", "f", "w"],
+      "commands": ["actions.find"]
+    },
+
+    // Creer un nouveau fichier
+    {
+      "before": ["<leader>", "a"],
+      "commands": ["workbench.action.files.newUntitledFile"]
+    },
+    // Formattage du document
+    {
+      "before": ["<leader>", "f", "p"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    // Changer le focus des editeurs
+    {
+      "before": ["<leader>", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+
+    {
+      "before": ["<leader>", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    }
+  ],
+
+  "vim.insertModeKeyBindingsNonRecursive": [
+    //Desactive le mode insert
+    {
+      "before": ["leader", "i"],
+      "after": ["<esc>"]
+    },
+    // Desactive les fleches
+    {
+      "before": ["<up>"],
+      "after": []
+    },
+    {
+      "before": ["<down>"],
+      "after": []
+    },
+    {
+      "before": ["<left>"],
+      "after": []
+    },
+    {
+      "before": ["<right>"],
+      "after": []
+    }
+  ],
+  "cmake.showOptionsMovedNotification": false,
+  "redhat.telemetry.enabled": true,
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "C_Cpp.default.includePath": ["/opt/X11/include"],
+  "dart.renameFilesWithClasses": "always",
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "git.openRepositoryInParentFolders": "never",
+  "cmake.configureOnOpen": false,
+  "liveServer.settings.donotVerifyTags": true,
+  "codeium.enableConfig": {
+    "*": true,
+    "properties": true
+  },
+  "editor.accessibilitySupport": "on",
+  "accessibility.signals.chatRequestSent": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.voiceRecordingStarted": {
+    "sound": "off"
+  },
+  "accessibility.signals.terminalCommandFailed": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.terminalBell": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.chatResponseReceived": {
+    "sound": "off"
+  },
+  "accessibility.signals.clear": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.diffLineDeleted": {
+    "sound": "off"
+  },
+  "accessibility.signals.diffLineInserted": {
+    "sound": "off"
+  },
+  "accessibility.signals.diffLineModified": {
+    "sound": "off"
+  },
+  "accessibility.signals.lineHasBreakpoint": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.voiceRecordingStopped": {
+    "sound": "off"
+  },
+  "accessibility.signals.terminalCommandSucceeded": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.terminalQuickFix": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.taskFailed": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.taskCompleted": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.progress": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.positionHasWarning": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.positionHasError": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.onDebugBreak": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.lineHasWarning": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.noInlayHints": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.notebookCellCompleted": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.notebookCellFailed": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.lineHasInlineSuggestion": {
+    "sound": "off"
+  },
+  "accessibility.signals.lineHasFoldedArea": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.lineHasError": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "pylint.cwd": "${fileDirname}/env/python"
 }
